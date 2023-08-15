@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import "./CreateToken.css";
-import { Checkbox, Form, Input, Spin } from "antd";
-import Footer from "../footer/Footer";
-import { DeployToken } from "../../api/api";
-import { LoadingOutlined } from "@ant-design/icons";
-import { notification } from "antd";
-import { GetChainConfig } from "../../App/Config/Config";
-import { useNetwork } from "wagmi";
+import React, { useState } from 'react';
+import './CreateToken.css';
+import { Checkbox, Form, Input, Spin } from 'antd';
+import Footer from '../footer/Footer';
+import { DeployToken } from '../../api/api';
+import { LoadingOutlined } from '@ant-design/icons';
+import { notification } from 'antd';
+import { GetChainConfig } from '../../App/Config/Config';
+import { useNetwork } from 'wagmi';
 
 const CreateToken = () => {
   const [form] = Form.useForm();
-  const { chain } = useNetwork()
+  const { chain } = useNetwork();
   const [isFormFilled, setIsFormFilled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [api, contextHolder] = notification.useNotification();
@@ -33,21 +33,19 @@ const CreateToken = () => {
     setLoading(false);
   };
 
-
   const viewTransaction = () => {
     const config = GetChainConfig(chain.id);
-    window.open(`${config.explorer}/tx/${res?.hash}`, "_blank");
+    window.open(`${config.explorer}/tx/${res?.hash}`, '_blank');
   };
 
   const CopyAddress = () => {
-    navigator.clipboard.writeText(res?.address)
+    navigator.clipboard.writeText(res?.address);
     api.info({
       message: `Address Copied`,
       description: `Address ${res?.address} is coppied SuccesFully`,
-      placement:"topRight"
-    })
-
-  }
+      placement: 'topRight',
+    });
+  };
 
   const handleCreateToken = () => {
     form
@@ -57,7 +55,7 @@ const CreateToken = () => {
         onFinish(values);
       })
       .catch((error) => {
-        console.log("Form validation error:", error);
+        console.log('Form validation error:', error);
       });
   };
 
@@ -115,23 +113,27 @@ const CreateToken = () => {
                       >
                         View transaction
                       </button>
-                      <button onClick={() => {
-                        CopyAddress()
-                      }}>Copy address</button>
+                      <button
+                        onClick={() => {
+                          CopyAddress();
+                        }}
+                      >
+                        Copy address
+                      </button>
                       <button
                         style={{
-                          backgroundColor: "#F95997",
-                          border: "none",
-                          color: "#ffffff",
+                          backgroundColor: '#F95997',
+                          border: 'none',
+                          color: '#ffffff',
                         }}
                       >
                         Create launchpad
                       </button>
                       <button
                         style={{
-                          backgroundColor: "#F95997",
-                          border: "none",
-                          color: "#ffffff",
+                          backgroundColor: '#F95997',
+                          border: 'none',
+                          color: '#ffffff',
                         }}
                       >
                         Create fairlaunch
@@ -159,13 +161,13 @@ const CreateToken = () => {
                     layout="vertical"
                     form={form}
                     style={{
-                      maxWidth: "100%",
+                      maxWidth: '100%',
                     }}
                     onChange={handleFormChange}
                     onFinish={onFinish} // Add onFinish prop to the Form component
                   >
                     <select className="selectedBox">
-                    <option value="">Standard Token</option>
+                      <option value="">Standard Token</option>
                       <option value="">Liquidity Generator Token</option>
                       <option value="">Baby Token</option>
                       <option value="">BuyBack Baby Token</option>
@@ -191,33 +193,33 @@ const CreateToken = () => {
                       name="decimals"
                       rules={[{ required: true }]}
                     >
-                      <Input placeholder="18" type={"number"} />
+                      <Input placeholder="18" type={'number'} />
                     </Form.Item>
                     <Form.Item
                       label="Total supply"
                       name="totalSupply"
                       rules={[{ required: true }]}
                     >
-                      <Input type={"number"} placeholder="10000000" />
+                      <Input type={'number'} placeholder="10000000" />
                     </Form.Item>
                     <Checkbox>Implement Pink Anti-Bot System?</Checkbox>
                   </Form>
                   <div className="nextBtn">
                     <button
                       onClick={handleCreateToken}
-                      className={isFormFilled ? "filledBtn" : "unfilledBtn"}
+                      className={isFormFilled ? 'filledBtn' : 'unfilledBtn'}
                     >
                       {loading ? (
                         <>
-                          <span>Create Token</span>{" "}
+                          <span>Create Token</span>{' '}
                           <Spin
                             indicator={
                               <LoadingOutlined style={{ fontSize: 18 }} spin />
                             }
-                          />{" "}
+                          />{' '}
                         </>
                       ) : (
-                        "Create Token"
+                        'Create Token'
                       )}
                     </button>
                   </div>

@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import "./TokenAddress.css";
-import { Checkbox, Form, Input, Modal, Radio, Space, Spin } from "antd";
-import DeFiLaunchpadInfo from "../DeFiLaunchpadInfo/DeFiLaunchpadInfo";
-import AddAdditionalInfo from "../AddAdditionalInfo/AddAdditionalInfo";
-import Finished from "../Finished/Finished";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchTokenDetails } from "../../../App/redux/features/createToken/createTokenSlice";
-import CreateToken from "../../CreateToken/CreateToken";
+import React, { useState } from 'react';
+import './TokenAddress.css';
+import { Checkbox, Form, Input, Modal, Radio, Space, Spin } from 'antd';
+import DeFiLaunchpadInfo from '../DeFiLaunchpadInfo/DeFiLaunchpadInfo';
+import AddAdditionalInfo from '../AddAdditionalInfo/AddAdditionalInfo';
+import Finished from '../Finished/Finished';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchTokenDetails } from '../../../App/redux/features/createToken/createTokenSlice';
+import CreateToken from '../../CreateToken/CreateToken';
 import {
   addLounchPadData,
   validateForm1,
-} from "../../../App/redux/features/lounchPad/LounchPadSlice";
-import { lounchPadFormSelector } from "../../selector/selector";
-import { LoadingOutlined } from "@ant-design/icons";
+} from '../../../App/redux/features/lounchPad/LounchPadSlice';
+import { lounchPadFormSelector } from '../../selector/selector';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const TokenAddress = () => {
   const [modelCreated, setModelCreated] = useState(false);
   const [isOpen, setIsopen] = useState(false);
-  const [currency, setValue] = useState("BNB");
-  const [affilate, setaffilate] = useState("Disable");
-  const [listingType, setlistingType] = useState("AUTO");
+  const [currency, setValue] = useState('BNB');
+  const [affilate, setaffilate] = useState('Disable');
+  const [listingType, setlistingType] = useState('AUTO');
   const [isLoading, setIsLoading] = useState(true);
-  const [fee, setfee] = useState("");
+  const [fee, setfee] = useState('');
   const [form] = Form.useForm();
 
   const modalHandle = () => {
@@ -32,17 +32,17 @@ const TokenAddress = () => {
   };
 
   const initialValues = {
-    Currency: "",
-    PaymentOption: "",
-    facebook: "",
-    twitter: "",
-    Github: "",
-    telegram: "",
-    instagram: "",
-    discord: "",
-    Reddit: "",
-    Youtube: "",
-    description: "",
+    Currency: '',
+    PaymentOption: '',
+    facebook: '',
+    twitter: '',
+    Github: '',
+    telegram: '',
+    instagram: '',
+    discord: '',
+    Reddit: '',
+    Youtube: '',
+    description: '',
   };
 
   const dispatch = useDispatch();
@@ -98,7 +98,12 @@ const TokenAddress = () => {
                 <div></div>
               </div>
               <div className="inputBox">
-                <Form.Item name={"address"}  rules={[{ required: true, message: "token address is required"}]}>
+                <Form.Item
+                  name={'address'}
+                  rules={[
+                    { required: true, message: 'token address is required' },
+                  ]}
+                >
                   <Input
                     type="text"
                     onChange={(e) => {
@@ -136,13 +141,13 @@ const TokenAddress = () => {
                   <Radio.Group
                     onChange={onChange}
                     value={currency}
-                    defaultValue={"BNB"}
+                    defaultValue={'BNB'}
                   >
                     <Space direction="vertical">
-                      <Radio value={"BNB"}>BNB</Radio>
-                      <Radio value={"BUSD"}>BUSD</Radio>
-                      <Radio value={"USDT"}>USDT</Radio>
-                      <Radio value={"USDC"}>USDC</Radio>
+                      <Radio value={'BNB'}>BNB</Radio>
+                      <Radio value={'BUSD'}>BUSD</Radio>
+                      <Radio value={'USDT'}>USDT</Radio>
+                      <Radio value={'USDC'}>USDC</Radio>
                     </Space>
                   </Radio.Group>
                 </Form.Item>
@@ -152,13 +157,17 @@ const TokenAddress = () => {
               <div className="chechboxDiv">
                 <h3 className="currency">Fee Options</h3>
                 <Form.Item name="PaymentOption">
-                  <Radio.Group onChange={onChange} value={fee} defaultValue={"BNB"}>
+                  <Radio.Group
+                    onChange={onChange}
+                    value={fee}
+                    defaultValue={'BNB'}
+                  >
                     <Space direction="vertical">
-                      <Radio onChange={onChange} value={"BNB"}>
-                        5% BNB raised only{" "}
+                      <Radio onChange={onChange} value={'BNB'}>
+                        5% BNB raised only{' '}
                         <span className="pool">(Recommended)</span>
                       </Radio>
-                      <Radio onChange={onChange} value={"Other"}>
+                      <Radio onChange={onChange} value={'Other'}>
                         Others
                       </Radio>
                     </Space>
@@ -171,11 +180,11 @@ const TokenAddress = () => {
                   <Radio.Group
                     onChange={onChange}
                     value={listingType}
-                    defaultValue={"Auto"}
+                    defaultValue={'Auto'}
                   >
                     <Space direction="vertical">
-                      <Radio value={"Auto"}>Auto Listing</Radio>
-                      <Radio value={"Manual"}>Manual listing</Radio>
+                      <Radio value={'Auto'}>Auto Listing</Radio>
+                      <Radio value={'Manual'}>Manual listing</Radio>
                     </Space>
                   </Radio.Group>
                 </Form.Item>
@@ -187,11 +196,11 @@ const TokenAddress = () => {
                   <Radio.Group
                     onChange={onChange}
                     value={affilate}
-                    defaultValue={"Disabled"}
+                    defaultValue={'Disabled'}
                   >
                     <Space direction="vertical">
-                      <Radio value={"Disabled"}>Disable Affilate</Radio>
-                      <Radio value={"Enabled"}>Enable Affilate</Radio>
+                      <Radio value={'Disabled'}>Disable Affilate</Radio>
+                      <Radio value={'Enabled'}>Enable Affilate</Radio>
                     </Space>
                   </Radio.Group>
                 </Form.Item>

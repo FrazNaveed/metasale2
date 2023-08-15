@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './MultiSender.css';
-import { Space, Steps } from 'antd';
-import { useSelector } from 'react-redux';
-import { lounchPadFormSelector } from '../selector/selector';
+import { Steps } from 'antd';
+// import { useSelector } from 'react-redux';
+// import { lounchPadFormSelector } from '../selector/selector';
 import { AiOutlineCopy } from 'react-icons/ai';
 
 const MultiSender = () => {
@@ -12,7 +12,7 @@ const MultiSender = () => {
   const handleCSVUpload = (event) => {
     const file = event.target.files[0];
     setCSVFile(file);
-
+    console.log(csvFile);
     if (file) {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -44,8 +44,9 @@ const MultiSender = () => {
           <label htmlFor="tokenaddress">Token address</label>
           <input type="text" placeholder="EX:" />
           <p>
-            Pink Multi-sender allows you to send ERC20 token in batch by easiest way. You can enter token address to
-            send specific token or leave it blank to send chain token such as BNB....
+            Pink Multi-sender allows you to send ERC20 token in batch by easiest
+            way. You can enter token address to send specific token or leave it
+            blank to send chain token such as BNB....
           </p>
           <div className="allocation_section">
             <label htmlFor="tokenaddress">Allocations*</label>
@@ -56,7 +57,9 @@ const MultiSender = () => {
               value={csvContent}
               readOnly
             ></textarea>
-            <p style={{ color: '#FA6200' }}>Recipients allocation is required</p>
+            <p style={{ color: '#FA6200' }}>
+              Recipients allocation is required
+            </p>
             <div className="choose_file_section">
               <input type="file" onChange={handleCSVUpload} required />
               <button className="sample_csv_text_utton">Sample CSV file</button>
@@ -64,7 +67,8 @@ const MultiSender = () => {
           </div>
 
           <div className="alert_messege_section_bottom">
-            Please exclude <strong>0x39D3653Be6F64427fa82C9B02D8669c3D4339F85</strong>{' '}
+            Please exclude{' '}
+            <strong>0x39D3653Be6F64427fa82C9B02D8669c3D4339F85</strong>{' '}
             <span className="copy_icon">
               <AiOutlineCopy />
             </span>{' '}
@@ -77,10 +81,11 @@ const MultiSender = () => {
       </div>
       <div className="footer container">
         <p>
-          Disclaimer: MetaSale will never endorse or encourage that you invest in any of the projects listed and
-          therefore, accept no liability for any loss occasioned. It is the user(s) responsibility to do their own
-          research and seek financial advice from a professional. More information about (DYOR) can be found via{' '}
-          <span>Binance Academy</span>
+          Disclaimer: MetaSale will never endorse or encourage that you invest
+          in any of the projects listed and therefore, accept no liability for
+          any loss occasioned. It is the user(s) responsibility to do their own
+          research and seek financial advice from a professional. More
+          information about (DYOR) can be found via <span>Binance Academy</span>
         </p>
       </div>
     </div>

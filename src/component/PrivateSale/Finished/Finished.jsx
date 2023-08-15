@@ -1,12 +1,12 @@
-import React from "react";
-import "./Finished.css";
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import './Finished.css';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   validateForm2,
   validateForm3,
-} from "../../../App/redux/features/lounchPad/LounchPadSlice";
-import { lounchPadFormSelector } from "../../selector/selector";
-import { addLounchPadData } from "../../../App/redux/features/FormStore/FormSlice";
+} from '../../../App/redux/features/lounchPad/LounchPadSlice';
+import { lounchPadFormSelector } from '../../selector/selector';
+import { addLounchPadData } from '../../../App/redux/features/FormStore/FormSlice';
 
 const Finished = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Finished = () => {
       <table>
         <tr>
           <td>Total token</td>
-          <td className="hello" style={{ color: "#FA6200" }}>
+          <td className="hello" style={{ color: '#FA6200' }}>
             2.988 MINI
           </td>
         </tr>
@@ -189,7 +189,7 @@ const Finished = () => {
           <button
             className="back_button"
             onClick={() => {
-              dispatch(addLounchPadData({lounchpadForm :2}));
+              dispatch(addLounchPadData({ lounchpadForm: 2 }));
             }}
           >
             Back

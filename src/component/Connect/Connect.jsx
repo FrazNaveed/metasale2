@@ -1,63 +1,60 @@
-import React from "react";
-import "../Connect/connect.css";
+import React from 'react';
+import '../Connect/connect.css';
 
-import { Button } from "antd";
-import img1 from "../../Images/metamask.svg";
-import img2 from "../../Images/coinbaseWallet.png";
-import img3 from "../../Images/wallet.svg";
-import img4 from "../../Images/trust.svg";
+import { Button } from 'antd';
+import img1 from '../../Images/metamask.svg';
+import img2 from '../../Images/coinbaseWallet.png';
+import img3 from '../../Images/wallet.svg';
+import img4 from '../../Images/trust.svg';
 
-import img5 from "../../Images/safe.jpg";
-import img6 from "../../Images/MathWallet.png";
-import img7 from "../../Images/TokenPocket.png";
-import img8 from "../../Images/bitkeep.png";
-import { useNavigate } from "react-router-dom";
-
+import img5 from '../../Images/safe.jpg';
+import img6 from '../../Images/MathWallet.png';
+import img7 from '../../Images/TokenPocket.png';
+import img8 from '../../Images/bitkeep.png';
+import { useNavigate } from 'react-router-dom';
 
 const ConnectData = [
   {
     img: img1,
-    text: "Metamask",
+    text: 'Metamask',
   },
   {
     img: img2,
-    text: "Coinbase Wallet",
+    text: 'Coinbase Wallet',
   },
   {
     img: img3,
-    text: "WalletConnect",
+    text: 'WalletConnect',
   },
   {
     img: img4,
-    text: "TrustWallet",
+    text: 'TrustWallet',
   },
   {
     img: img5,
-    text: "Safepal",
+    text: 'Safepal',
   },
 
   {
     img: img6,
-    text: "Math Wallet",
+    text: 'Math Wallet',
   },
   {
     img: img7,
-    text: "TokenPocket",
+    text: 'TokenPocket',
   },
   {
     img: img8,
-    text: "BitKeep",
+    text: 'BitKeep',
   },
 ];
 
-
-
 export default function Connect() {
-  const nav = useNavigate()
+  const nav = useNavigate();
 
-  const handleConnectBtn = ()=>{
-    nav("/me")
-  }
+  const handleConnectBtn = () => {
+    nav('/me');
+  };
 
   return (
     <div className="bsc_testnet_modal">
@@ -68,7 +65,11 @@ export default function Connect() {
       </div>
       <div className="network_item">
         {ConnectData.map((item) => (
-          <Button type="" className="network_item_content" onClick={handleConnectBtn}>
+          <Button
+            type=""
+            className="network_item_content"
+            onClick={handleConnectBtn}
+          >
             <div className="_imgheight">
               <img src={item.img} alt="" />
             </div>

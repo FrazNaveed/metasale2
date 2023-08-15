@@ -1,5 +1,5 @@
-import React from "react";
-import { Image, Table, Pagination } from "antd";
+import React from 'react';
+import { Image, Table, Pagination } from 'antd';
 // import emoji from "../../Images/emoji.png";
 
 const onShowSizeChange = (current, pageSize) => {
@@ -7,39 +7,36 @@ const onShowSizeChange = (current, pageSize) => {
 };
 const TableCom = () => {
   const columns = [
-    
     {
-      title: "Token",
-      dataIndex: "name",
+      title: 'Token',
+      dataIndex: 'name',
     },
     {
-      title: "Amount",
-      dataIndex: "age",
+      title: 'Amount',
+      dataIndex: 'age',
     },
     {
-      title: "View",
-      dataIndex: "address",
+      title: 'View',
+      dataIndex: 'address',
     },
   ];
   const data = [
     {
-      key: "1",
+      key: '1',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <br />
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>HKMoon</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>HKMoon</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               HKMoon
@@ -48,26 +45,24 @@ const TableCom = () => {
         </div>
       ),
 
-      age: "3,249,605,511,136.9754",
-      address: "View",
+      age: '3,249,605,511,136.9754',
+      address: 'View',
     },
     {
-      key: "2",
+      key: '2',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>PEPEAI</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>PEPEAI</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               PEPEAI
@@ -76,26 +71,24 @@ const TableCom = () => {
         </div>
       ),
 
-      age: "210,652,302,305",
-      address: "View",
+      age: '210,652,302,305',
+      address: 'View',
     },
     {
-      key: "3",
+      key: '3',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>HKMoon</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>HKMoon</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               HKMoon
@@ -104,28 +97,26 @@ const TableCom = () => {
         </div>
       ),
 
-      age: "29,027,610,000,000",
-      address: "View",
+      age: '29,027,610,000,000',
+      address: 'View',
     },
     {
-      key: "4",
+      key: '4',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>
+            <p style={{ margin: '0', fontSize: '14px' }}>
               Pepe Original Version
             </p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               Pepe Original Version
@@ -133,26 +124,24 @@ const TableCom = () => {
           </div>
         </div>
       ),
-      age: "70,000,000",
-      address: "View",
+      age: '70,000,000',
+      address: 'View',
     },
     {
-      key: "5",
+      key: '5',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>Macepepe Coin</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>Macepepe Coin</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               Macepepe Coin
@@ -160,26 +149,24 @@ const TableCom = () => {
           </div>
         </div>
       ),
-      age: "1,000,000,000,000",
-      address: "View",
+      age: '1,000,000,000,000',
+      address: 'View',
     },
     {
-      key: "6",
+      key: '6',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>PEPECEO</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>PEPECEO</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               PEPECEO
@@ -187,26 +174,24 @@ const TableCom = () => {
           </div>
         </div>
       ),
-      age: "170,000,000,000,000",
-      address: "View",
+      age: '170,000,000,000,000',
+      address: 'View',
     },
     {
-      key: "7",
+      key: '7',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>CHARZ</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>CHARZ</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               CHARZ
@@ -214,26 +199,24 @@ const TableCom = () => {
           </div>
         </div>
       ),
-      age: "2,000,000,000,000",
-      address: "View",
+      age: '2,000,000,000,000',
+      address: 'View',
     },
     {
-      key: "5",
+      key: '5',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>OpenCampus</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>OpenCampus</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               OpenCampus
@@ -241,26 +224,24 @@ const TableCom = () => {
           </div>
         </div>
       ),
-      age: "85,000,000",
-      address: "View",
+      age: '85,000,000',
+      address: 'View',
     },
     {
-      key: "5",
+      key: '5',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>MARIO CEO</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>MARIO CEO</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               MARIO CEO
@@ -269,26 +250,24 @@ const TableCom = () => {
         </div>
       ),
 
-      age: "6,000,000",
-      address: "View",
+      age: '6,000,000',
+      address: 'View',
     },
     {
-      key: "5",
+      key: '5',
       name: (
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <div className="left-col">
-            {/* <Image src={emoji} /> */}
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="left-col">{/* <Image src={emoji} /> */}</div>
           <div
             className="right-col"
-            style={{ display: "flex", flexDirection: "column" }}
+            style={{ display: 'flex', flexDirection: 'column' }}
           >
-            <p style={{ margin: "0", fontSize: "14px" }}>BTC REWARDS</p>
+            <p style={{ margin: '0', fontSize: '14px' }}>BTC REWARDS</p>
             <p
               style={{
-                margin: "0",
-                fontSize: "13px",
-                color: "rgba(0, 0, 0, 0.45)",
+                margin: '0',
+                fontSize: '13px',
+                color: 'rgba(0, 0, 0, 0.45)',
               }}
             >
               BTC REWARDS
@@ -297,22 +276,21 @@ const TableCom = () => {
         </div>
       ),
 
-      age: "6,000,000",
-      address: "View",
+      age: '6,000,000',
+      address: 'View',
     },
   ];
 
   return (
     <div className="table">
       <Table columns={columns} dataSource={data} size="middle" />
-      <div style={{ display: "flex", justifyContent: "center" }}>
-
-      <Pagination
-      showSizeChanger
-      onShowSizeChange={onShowSizeChange}
-      defaultCurrent={3}
-      total={500}
-    />
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Pagination
+          showSizeChanger
+          onShowSizeChange={onShowSizeChange}
+          defaultCurrent={3}
+          total={500}
+        />
       </div>
     </div>
   );

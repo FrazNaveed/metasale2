@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import "./TokenAddress.css";
-import { Checkbox, Form, Input, Modal, Radio, Space } from "antd";
-import DeFiLaunchpadInfo from "../DeFiLaunchpadInfo/DeFiLaunchpadInfo";
-import AddAdditionalInfo from "../AddAdditionalInfo/AddAdditionalInfo";
-import Finished from "../Finished/Finished";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchTokenDetails } from "../../../App/redux/features/createToken/createTokenSlice";
-import CreateToken from "../../CreateToken/CreateToken";
-import { validateForm1 ,addLounchPadData } from "../../../App/redux/features/lounchPad/LounchPadSlice";
-import { lounchPadFormSelector } from "../../selector/selector";
+import React, { useState } from 'react';
+import './TokenAddress.css';
+import { Checkbox, Form, Input, Modal, Radio, Space } from 'antd';
+import DeFiLaunchpadInfo from '../DeFiLaunchpadInfo/DeFiLaunchpadInfo';
+import AddAdditionalInfo from '../AddAdditionalInfo/AddAdditionalInfo';
+import Finished from '../Finished/Finished';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchTokenDetails } from '../../../App/redux/features/createToken/createTokenSlice';
+import CreateToken from '../../CreateToken/CreateToken';
+import {
+  validateForm1,
+  addLounchPadData,
+} from '../../../App/redux/features/lounchPad/LounchPadSlice';
+import { lounchPadFormSelector } from '../../selector/selector';
 
 const TokenAddress = () => {
   const [modelCreated, setModelCreated] = useState(false);
@@ -39,7 +42,7 @@ const TokenAddress = () => {
   };
 
   const handleNextBtn = () => {
-    dispatch(addLounchPadData({lounchpadForm:1}))
+    dispatch(addLounchPadData({ lounchpadForm: 1 }));
   };
 
   return (
@@ -132,7 +135,7 @@ const TokenAddress = () => {
                   >
                     <Space direction="vertical">
                       <Radio onChange={onChange}>
-                        5% BNB raised only{" "}
+                        5% BNB raised only{' '}
                         <span className="pool">(Recommended)</span>
                       </Radio>
                       <Radio onChange={onChange}>Others</Radio>

@@ -1,51 +1,51 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import Web3 from "web3";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import Web3 from 'web3';
 
 const initialState = {
   tokenDetails: null,
-  searchLoader:false,
+  searchLoader: false,
   lounchpadForm_1_Enabled: false,
   lounchpadForm_2_Enabled: false,
   lounchpadForm_3_Enabled: false,
-  progressBar:0,
+  progressBar: 0,
   lounchPadData: null,
   reviewDataEnabled: false,
 };
 
 export const fetchTokenDetails = createAsyncThunk(
-  "todo/fetchTokenDetails",
+  'todo/fetchTokenDetails',
   async (tokenAddress, thunkAPI) => {
     try {
-      const web3 = new Web3("https://data-seed-prebsc-1-s1.binance.org:8545");
+      const web3 = new Web3('https://data-seed-prebsc-1-s1.binance.org:8545');
 
       const contract = new web3.eth.Contract(
         [
           {
             constant: true,
             inputs: [],
-            name: "name",
-            outputs: [{ name: "", type: "string" }],
+            name: 'name',
+            outputs: [{ name: '', type: 'string' }],
             payable: false,
-            stateMutability: "view",
-            type: "function",
+            stateMutability: 'view',
+            type: 'function',
           },
           {
             constant: true,
             inputs: [],
-            name: "symbol",
-            outputs: [{ name: "", type: "string" }],
+            name: 'symbol',
+            outputs: [{ name: '', type: 'string' }],
             payable: false,
-            stateMutability: "view",
-            type: "function",
+            stateMutability: 'view',
+            type: 'function',
           },
           {
             constant: true,
             inputs: [],
-            name: "decimals",
-            outputs: [{ name: "", type: "uint8" }],
+            name: 'decimals',
+            outputs: [{ name: '', type: 'uint8' }],
             payable: false,
-            stateMutability: "view",
-            type: "function",
+            stateMutability: 'view',
+            type: 'function',
           },
         ],
         tokenAddress
@@ -61,14 +61,14 @@ export const fetchTokenDetails = createAsyncThunk(
         decimals,
       };
     } catch (error) {
-      console.log("Error fetching token details:", error);
+      console.log('Error fetching token details:', error);
       throw error;
     }
   }
 );
 
 const lounchPad = createSlice({
-  name: "Lounchpad",
+  name: 'Lounchpad',
   initialState,
   reducers: {
     validateForm1: (state, action) => {
@@ -92,7 +92,7 @@ const lounchPad = createSlice({
     addLounchPadData: (state, action) => {
       const newData = action.payload;
       state.lounchPadData = { ...state.lounchPadData, ...newData };
-    },     
+    },
     clearAllForm: (state, action) => {
       state.progressBar = 0;
       state.lounchpadForm_2_Enabled = false;
@@ -113,6 +113,11 @@ const lounchPad = createSlice({
   },
 });
 
-export const { validateForm1, validateForm2, validateForm3, clearAllForm , addLounchPadData} =
-  lounchPad.actions;
+export const {
+  validateForm1,
+  validateForm2,
+  validateForm3,
+  clearAllForm,
+  addLounchPadData,
+} = lounchPad.actions;
 export default lounchPad.reducer;

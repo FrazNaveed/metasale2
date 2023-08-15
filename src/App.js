@@ -3,14 +3,13 @@ import './App.css';
 
 import { router } from './RouterProvider/Index';
 
-
 function App() {
   return (
     <>
-     <RouterProvider
-    router={router}
-    // fallbackElement={<BigSpinner />}
-  />
+      <RouterProvider
+        router={router}
+        // fallbackElement={<BigSpinner />}
+      />
     </>
   );
 }

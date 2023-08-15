@@ -1,26 +1,24 @@
-._parent{
-    padding: 20px;
+._parent {
+  padding: 20px;
 }
 
-.wallet-icon{
-display: none;
-width: 40px;
-height: 40px;
-padding: 5px;
-border-radius: 50px;
+.wallet-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50px;
 }
 
-.connect-wallet{
-    display: block;
-
+.connect-wallet {
+  display: block;
 }
-
 
 @media only screen and (max-width: 780px) {
-   .wallet-icon{
+  .wallet-icon {
     display: block;
-   }
-   .connect-wallet{
-    display: none;
-   }
   }
+  .connect-wallet {
+    display: none;
+  }
+}

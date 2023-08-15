@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const AdvancedContribution = () => {
-  return (
-    <div>AdvancedContribution</div>
-  )
-}
+  return <div>AdvancedContribution</div>;
+};
 
-export default AdvancedContribution
+export default AdvancedContribution;

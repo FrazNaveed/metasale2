@@ -1,11 +1,11 @@
-import React from 'react'
-import Token from '../Token/Token'
+import React from 'react';
+import Token from '../Token/Token';
 const Liquidity = () => {
   return (
     <>
-      <Token/>
+      <Token />
     </>
-  )
-}
+  );
+};
 
-export default Liquidity
+export default Liquidity;

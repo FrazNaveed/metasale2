@@ -1,13 +1,13 @@
-import React from 'react'
-import BodyContent from '../Bodycontent/BodyContent'
-import LaunchpadProtocol from './LaunchpadProtocol'
+import React from 'react';
+import BodyContent from '../Bodycontent/BodyContent';
+import LaunchpadProtocol from './LaunchpadProtocol';
 
 const MainLayoutLaunchpad = () => {
   return (
     <>
-    <LaunchpadProtocol/>
+      <LaunchpadProtocol />
     </>
-  )
-}
+  );
+};
 
-export default MainLayoutLaunchpad
+export default MainLayoutLaunchpad;
